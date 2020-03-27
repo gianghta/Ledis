@@ -1,1 +1,1 @@
-web: uvicorn ledis.app:app
+web: uvicorn ledis.app:app --port $PORT
