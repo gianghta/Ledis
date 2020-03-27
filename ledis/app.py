@@ -50,7 +50,6 @@ async def http_exception(request, exc):
 
 
 app = Starlette(
-    debug=True,
     routes=routes,
     exception_handlers={HTTPException: http_exception},
     middleware=middleware,
