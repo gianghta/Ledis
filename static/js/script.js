@@ -1,10 +1,17 @@
 $(document).ready(function(){
+	let apiUrl;
+	if (window.location.hostname === 'localhost')
+	  apiUrl = `${window.location.protocol}//${window.location.hostname}:8000/command`;
+	// Production
+	else apiUrl = `${window.location.protocol}//${window.location.hostname}/command`;
+
 	$("#command").keydown(function(e){
 		// Enter key
 		if(e.keyCode == 13){
+
 			$("#command").prop('disabled', true);
 			$.ajax({
-				url: "https://ledis-app-proj.herokuapp.com/command",
+				url: "http://localhost:8000/command",
 				type: "POST",
 				data: ({'command': $("#command").val()}),
 				success: function(response){
