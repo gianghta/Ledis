@@ -1,9 +1,15 @@
 $(document).ready(function(){
 	let apiUrl;
-	if (window.location.hostname === 'localhost')
+	if (window.location.hostname == 'localhost'
+		|| window.location.hostname == '127.0.0.1'
+		|| window.location.hostname == '0.0.0.0'
+	) {
 	  apiUrl = `${window.location.protocol}//${window.location.hostname}:8000/command`;
+	}
 	// Production
-	else apiUrl = `${window.location.protocol}//${window.location.hostname}/command`;
+	else {
+		apiUrl = `${window.location.protocol}//${window.location.hostname}/command`;
+	}
 
 	$("#command").keydown(function(e){
 		// Enter key
