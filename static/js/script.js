@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 			$("#command").prop('disabled', true);
 			$.ajax({
-				url: "http://localhost:8000/command",
+				url: apiUrl,
 				type: "POST",
 				data: ({'command': $("#command").val()}),
 				success: function(response){
