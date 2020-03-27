@@ -1,0 +1,30 @@
+<!-- Reference: https://tailwindcomponents.com/component/coinbase-clone -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ledis CLI</title>
+	<meta charset="utf-8">
+	<link href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" href={{ url_for('static', path='/css/style.css') }}>
+
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src={{ url_for('static', path='/js/script.js') }}></script>
+	<div class="w-full my-5 lg:mb-0 px-4 flex flex-col">
+		<div class="flex-grow flex flex-col bg-white border-t border-b sm:rounded sm:border shadow overflow-hidden">
+			<div class="border-b">
+				<div class="flex justify-between px-6 -mb-px">
+					<h2 class="text-gray-800 text-2xl font-semibold py-4">Ledis CLI</h2>
+				</div>
+			</div>
+			<div id="log"></div>
+			<div class="px-6 py-4">
+				<div class="text-grey">
+					<input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" id="command" name="command" type="text" placeholder="<command> [key] [...value]"></input>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

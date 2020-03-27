@@ -1,0 +1,1 @@
+web: uvicorn ledis.app:app
