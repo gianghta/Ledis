@@ -1,6 +1,6 @@
 # Ledis
 
-A lightweight version of Redis
+A lightweight version of Redis. Try out demo [here](https://ledis-app-proj.herokuapp.com/)
 
 > Written in Python 3.7
 
