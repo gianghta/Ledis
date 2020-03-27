@@ -4,7 +4,7 @@ $(document).ready(function(){
 		if(e.keyCode == 13){
 			$("#command").prop('disabled', true);
 			$.ajax({
-				url: "http://localhost:8000/command",
+				url: "https://ledis-app-proj.herokuapp.com/command",
 				type: "POST",
 				data: ({'command': $("#command").val()}),
 				success: function(response){
