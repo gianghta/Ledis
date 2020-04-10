@@ -61,3 +61,6 @@ poetry run pytest
 ## Documentation
 
 [Read docs here](/docs/README.md)
+
+## License
+Under [MIT](/LICENSE.md) license.
